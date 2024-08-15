@@ -23,7 +23,34 @@
 // document.previousSibling('..');
 // document.nextSibling('..');
 
-const button = document.querySelector('.btn');
-button.style.backgroundColor = 'orange';
-button.style.color = 'white';
-console.log(button.style);
+// const button = document.querySelector('.btn');
+// button.style.backgroundColor = 'orange';
+// button.style.color = 'white';
+// console.log(button.style);
+
+
+
+
+// const title = document.createElement('h1');
+// console.log(title);
+
+// title.textContent = 'Hello';
+// console.log(title);
+
+// const image = document.createElement('img');
+// console.log(image);
+// image.src = 'https://...';
+// image.alt =  'cat';
+
+
+const list = document.querySelector('.username');
+
+const lastItem = document.createElement('li');
+lastItem.textContent = 'Bob';
+list.append(lastItem);
+
+const firstItem = document.createElement('li');
+firstItem.textContent = 'Alex';
+list.prepend(firstItem);
+
+const text = document.
