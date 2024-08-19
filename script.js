@@ -43,14 +43,39 @@
 // image.alt =  'cat';
 
 
-const list = document.querySelector('.username');
+// const list = document.querySelector('.username');
 
-const lastItem = document.createElement('li');
-lastItem.textContent = 'Bob';
-list.append(lastItem);
+// const lastItem = document.createElement('li');
+// lastItem.textContent = 'Bob';
+// list.append(lastItem);
 
-const firstItem = document.createElement('li');
-firstItem.textContent = 'Alex';
-list.prepend(firstItem);
+// const firstItem = document.createElement('li');
+// firstItem.textContent = 'Alex';
+// list.prepend(firstItem);
 
-const text = document.
+// const text = document.
+
+
+const title = document.querySelector('.article .title');
+title.innerHTML = 'New article title';
+
+
+
+
+const technologies = ['HTML', 'CSS', 'JavaSCript', 'React', 'Node'];
+const list = document.querySelector('list');
+
+const markup = technologies
+.map((technology) => `<li class='list item'>${technology}</li>`)
+.join('');
+
+console.log(markup);
+list.innerHTML = markup;
+
+list.insertAdjacentHTML("afterbegin", '<h3>New title</h3>');
+
+const saveButton = document.querySelector('button[data-action"save"]');
+console.log(saveButton.dataset.action);
+
+const closeButton = document.querySelector('button[data-action"close"]');
+console.log(closeButton.dataset.action);
