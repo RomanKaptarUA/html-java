@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: skyblue;
     margin: 20px;
     padding: 0 15;
@@ -13,4 +13,23 @@ body{
 .username li{
 border: 1px solid blue;
 
+} */
+
+/* .btn{
+    background-color: #539915;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+} */
+
+.color-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: fuchsia;
+    border: none;
+    border-radius: 5px;
+    
 }
