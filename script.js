@@ -144,7 +144,63 @@
 //     button.style.backgroundColor = randomColor;
 // }
 
-function addAlert(){
-    alert('hello');
-}
+// function addAlert(){
+//     alert('hello');
+// }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// події клавіатури
+
+//клавіатура
+
+// document.addEventListener("keydown", event => {
+//     console.log("keydown", event);
+// }
+// )
+
+// document.addEventListener("keyup", event => {
+//     console.log("keyup", event);
+// }
+// )
+
+
+// document.addEventListener("keydown", event => {
+//     console.log('key:', event.key);
+//     console.log('code:', event.code);
+// })
+
+
+// document.addEventListener("keydown", event => {
+//     event.preventDefault();
+
+//     if((event.ctrlKey || event.altKey) && event.code === "KeyS"); {
+//         console.log("ctrl+s or command+s");
+//     }
+// })
+
+//мишка
+
+const element = document.getElementById('mousedown-up');
+
+element.addEventListener('mousedown', () => {
+    element.textContent = 'Кнопка миші натиснута';
+});
+
+element.addEventListener('mouseup', () => {
+    element.textContent = 'Кнопка миші відпущена';
+})
