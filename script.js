@@ -194,13 +194,66 @@
 // })
 
 //мишка
+ 
+//MOUSEDOWN-UP
 
-const element = document.getElementById('mousedown-up');
 
-element.addEventListener('mousedown', () => {
-    element.textContent = 'Кнопка миші натиснута';
-});
+// const element = document.getElementById('mousedown-up');
 
-element.addEventListener('mouseup', () => {
-    element.textContent = 'Кнопка миші відпущена';
-})
+// element.addEventListener('mousedown', () => {
+//     element.textContent = 'Кнопка миші натиснута';
+// });
+
+// element.addEventListener('mouseup', () => {
+//     element.textContent = 'Кнопка миші відпущена';
+// });
+
+
+//MOUSEOVER-OUT
+
+
+// const element = document.getElementById('mouseover-out');
+// element.addEventListener('mouseover', () => {
+//     element.textContent = 'Курсор над елементом';
+// });
+
+// element.addEventListener('mouseout', () => {
+// element.textContent = "Курсор вийшов з елемента"
+// });
+
+// const element = document.getElementById('mousemove');
+// element.addEventListener('mousemove', (e) => {
+//     element.textContent = `Координати миші: X=${e.clientX}, Y=${e.clientY}`;
+// });
+
+
+
+
+
+
+// Написати програму яка буде за допомогою миші рухати блок на екрані.
+//  Цей код повинен прослуховати подію mousemove на документі та рухати блок на відстань,
+//   яку миша змістилася відносно центру блоку. Якщо вам потрібно рухати саме центр блоку,
+//    ви можете додати до відстані половину ширини та висоти блоку.
+
+
+
+
+
+
+const block = document.querySelector('.block');
+document.addEventListener('mousemove', e => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    const width = block.offsetWidth;
+    const height = block.offsetHeight;
+    const newBlockX = mouseX - width / 2;
+    const newBlockY = mouseY - height / 2;
+    block.style.left = `${newBlockX}px`;
+    block.style.top = `${newBlockY}px`;
+ });
+
+ document.addEventListener('click', () => {
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    block.style.backgroundColor = randomColor;
+ })

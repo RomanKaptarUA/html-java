@@ -24,7 +24,7 @@ border: 1px solid blue;
     cursor: pointer;
 } */
 
-.color-button{
+/* .color-button{
     padding: 10px 20px;
     font-size: 16px;
     color: white;
@@ -32,4 +32,24 @@ border: 1px solid blue;
     border: none;
     border-radius: 5px;
     
-}
+} */
+
+/* #mousemove{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.block {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  };
+  
