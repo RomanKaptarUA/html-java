@@ -241,19 +241,75 @@
 
 
 
-const block = document.querySelector('.block');
-document.addEventListener('mousemove', e => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    const width = block.offsetWidth;
-    const height = block.offsetHeight;
-    const newBlockX = mouseX - width / 2;
-    const newBlockY = mouseY - height / 2;
-    block.style.left = `${newBlockX}px`;
-    block.style.top = `${newBlockY}px`;
- });
+// const block = document.querySelector('.block');
+// document.addEventListener('mousemove', e => {
+//     const mouseX = e.clientX;
+//     const mouseY = e.clientY;
+//     const width = block.offsetWidth;
+//     const height = block.offsetHeight;
+//     const newBlockX = mouseX - width / 2;
+//     const newBlockY = mouseY - height / 2;
+//     block.style.left = `${newBlockX}px`;
+//     block.style.top = `${newBlockY}px`;
+//  });
 
- document.addEventListener('click', () => {
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    block.style.backgroundColor = randomColor;
- })
+//  document.addEventListener('click', () => {
+//     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//     block.style.backgroundColor = randomColor;
+//  })
+
+
+
+
+
+
+// document.addEventListener('keydown', (event) =>{
+//    const bmw = document.getElementById('box');
+//    const step =  100;
+//    let left = parseInt(window.getComputedStyle(bmw).left);
+//    if (event.key === 'ArrowLeft'){
+//       bmw.style.left = `${left - step}px`;
+//    }
+//    else if (event.key === 'ArrowRight'){
+//       bmw.style.left = `${left + step}px`;
+//    }
+// });
+
+
+
+
+
+// Напиши гру "Натисни правильну клавішу", використовуючи події keydown та keypress.
+// Створити елементи для відображення повідомлення про стан гри та поточної клавіші, яку потрібно натиснути.
+// Створити масив keys, що містить десять можливих клавіш, які можуть бути натиснуті.
+// Створити змінну currentKeyIndex, що зберігає індекс поточної клавіші, яку потрібно натиснути.
+// Встановити текст елементу з id="key" на поточну клавішу, яку потрібно натиснути.
+// Створити обробник події keydown, що перевіряє, чи була натиснута правильна клавіша. Якщо була натиснута правильна клавіша, то збільшити currentKeyIndex на 1, встановити нову поточну клавішу та оновити текст елементу з id="key". Якщо була натиснута неправильна клавіша, то повідомити користувача про помилку.
+// Створити обробник події keypress, що запобігає дії за замовчуванням для уникнення несподіваного поведінки сторінки під час гри.
+// Додати кнопку "Нова гра", що оновлює гру з новим поточним ключем та повідомленням.
+
+const keys = ['d', 'j', 'e', 'b', 'h', 'p', 'x', 't', 'q', 'a'];
+let currentKeyIndex = 0;
+function startGame() {
+   currentKeyIndex = Math.floor(Math.random() * keys.length);
+ document.getElementById('key').textContent = keys[currentKeyIndex];
+}
+document.addEventListener('keydown', (e) => {
+if (e.key === keys[currentKeyIndex]){
+   document.getElementById('message').textContent = 
+   'Чудово! Натисніть наступну кнопку'
+   startGame();
+} else {
+      document.getElementById('message').textContent =
+       'Упс, помилка, спробуйте знову';
+}
+})
+document.addEventListener('keypress', (e) => {
+   e.preventDefault();
+})
+
+document.getElementById('resetGame').addEventListener('click', () => {
+   document.getElementById('message').textContent = 'Натисніть правильну клавішу:'
+   startGame();
+})
+startGame();
