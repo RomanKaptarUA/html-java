@@ -334,24 +334,35 @@
 // Замініть клас на заголовку.
 // Перевірте чи містить посилання клас list
 
-// const links = document.querySelectorAll('ul li a');
-// links.forEach(link => {
-//    const href = link.getAttribute('href')
-//    if (href.startsWith('https') || href.startsWith('http') || href.startsWith('ftp')){
-//       link.style.color = 'orange';
-//    }
-// });
+const links = document.querySelectorAll('ul li a');
+links.forEach(link => {
+   const href = link.getAttribute('href')
+   if (href.startsWith('https') || href.startsWith('http') || href.startsWith('ftp')){
+      link.style.color = 'orange';
+   }
+});
 
-// if (links.length > 0){
-//    links[0].classList.add('li_link');
-//    links[links.length - 1].classList.add('li_link');
-// }
+if (links.length > 0){
+   links[0].classList.add('li_link');
+   links[links.length - 1].classList.add('li_link');
+}
 
-// const text = document.querySelector('h1')
-// text.textContent = 'Title';
-// text.classList.add('title');
-// text.style.color = 'red';
-// text.classList.replace('title','newTitle');
+const text = document.querySelector('h1')
+text.textContent = 'Title';
+text.classList.add('title');
+text.style.color = 'red';
+text.classList.replace('title','newTitle');
+
+
+
+
+
+
+
+
+
+
+
 
 // const array1 = [5, 10, 15, 20];
 // const array2 = [10, 20, 30];
@@ -359,6 +370,15 @@
 // const sum2 = array2.reduce((acc, num) => acc + num, 0);
 // const total = sum1 + sum2;
 // console.log(`totalsum = ${total}`);
+
+
+
+
+
+
+
+
+
 
 // const products = [
 //    {name: 'Macbook', price: 1000, category: 'Electronics', stock: 56},
@@ -375,14 +395,25 @@
 // const totalValue = calc(products, 'Electronics');
 // console.log(`Electronics = ${totalValue}`);
 
-class Person{
-   constructor(firstName, lastName){
-      this.firstName = firstName;
-      this.lastName = lastName;
-   }
-   getFullName(){
-      return `${this.firstName} ${this.lastName}`;
-   }
-};
-const person1 = new Person('Roma', 'Kaptar');
-console.log(person1.getFullName());
+
+
+
+
+
+
+
+
+
+
+
+// class Person{
+//    constructor(firstName, lastName){
+//       this.firstName = firstName;
+//       this.lastName = lastName;
+//    }
+//    getFullName(){
+//       return `${this.firstName} ${this.lastName}`;
+//    }
+// };
+// const person1 = new Person('Roma', 'Kaptar');
+// console.log(person1.getFullName());
