@@ -93,7 +93,6 @@
 
 
 
-
 //події
 
 // const singleBtn = document.querySelector('#single');
@@ -288,28 +287,102 @@
 // Створити обробник події keypress, що запобігає дії за замовчуванням для уникнення несподіваного поведінки сторінки під час гри.
 // Додати кнопку "Нова гра", що оновлює гру з новим поточним ключем та повідомленням.
 
-const keys = ['d', 'j', 'e', 'b', 'h', 'p', 'x', 't', 'q', 'a'];
-let currentKeyIndex = 0;
-function startGame() {
-   currentKeyIndex = Math.floor(Math.random() * keys.length);
- document.getElementById('key').textContent = keys[currentKeyIndex];
-}
-document.addEventListener('keydown', (e) => {
-if (e.key === keys[currentKeyIndex]){
-   document.getElementById('message').textContent = 
-   'Чудово! Натисніть наступну кнопку'
-   startGame();
-} else {
-      document.getElementById('message').textContent =
-       'Упс, помилка, спробуйте знову';
-}
-})
-document.addEventListener('keypress', (e) => {
-   e.preventDefault();
-})
+// const keys = ['d', 'j', 'e', 'b', 'h', 'p', 'x', 't', 'q', 'a'];
+// let currentKeyIndex = 0;
+// function startGame() {
+//    currentKeyIndex = Math.floor(Math.random() * keys.length);
+//  document.getElementById('key').textContent = keys[currentKeyIndex];
+// }
+// document.addEventListener('keydown', (e) => {
+// if (e.key === keys[currentKeyIndex]){
+//    document.getElementById('message').textContent = 
+//    'Чудово! Натисніть наступну кнопку'
+//    startGame();
+// } else {
+//       document.getElementById('message').textContent =
+//        'Упс, помилка, спробуйте знову';
+// }
+// })
+// document.addEventListener('keypress', (e) => {
+//    e.preventDefault();
+// })
 
-document.getElementById('resetGame').addEventListener('click', () => {
-   document.getElementById('message').textContent = 'Натисніть правильну клавішу:'
-   startGame();
-})
-startGame();
+// document.getElementById('resetGame').addEventListener('click', () => {
+//    document.getElementById('message').textContent = 'Натисніть правильну клавішу:'
+//    startGame();
+// })
+// startGame();
+
+// Змінити фон елементу з id="box" на жовтий,
+// якщо користувач натискає клавішу y, та на зелений,
+// якщо користувач натискає клавішу g,
+// під час події keydown.
+
+// document.addEventListener('keydown', function(event) {
+// const element = document.getElementById('box');
+// if (event.key === 'y') {
+//   element.style.backgroundColor = 'yellow';
+// } else if (event.key === 'g'){
+//    element.style.backgroundColor = 'green';
+// } else if (event.key === 'p'){
+//    element.style.backgroundColor = 'pink';
+// }});
+
+// Зробіть всі зовнішні посилання помаранчевими, змінюючи властивість style.
+// Оберіть всі посилання всередині списку та додайте першому і останньому клас зі стилями
+// Додайте заголовок до тексту та стилізуйте його за допомогою додаткового класу.
+// Замініть клас на заголовку.
+// Перевірте чи містить посилання клас list
+
+// const links = document.querySelectorAll('ul li a');
+// links.forEach(link => {
+//    const href = link.getAttribute('href')
+//    if (href.startsWith('https') || href.startsWith('http') || href.startsWith('ftp')){
+//       link.style.color = 'orange';
+//    }
+// });
+
+// if (links.length > 0){
+//    links[0].classList.add('li_link');
+//    links[links.length - 1].classList.add('li_link');
+// }
+
+// const text = document.querySelector('h1')
+// text.textContent = 'Title';
+// text.classList.add('title');
+// text.style.color = 'red';
+// text.classList.replace('title','newTitle');
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// const sum1 = array1.reduce((acc, num) => acc + num, 0);
+// const sum2 = array2.reduce((acc, num) => acc + num, 0);
+// const total = sum1 + sum2;
+// console.log(`totalsum = ${total}`);
+
+// const products = [
+//    {name: 'Macbook', price: 1000, category: 'Electronics', stock: 56},
+//    {name: 'iPhone', price: 900, category: 'Electronics', stock: 46},
+//    {name: 'iPad', price: 800, category: 'Electronics', stock: 6},
+//    {name: 'AirPods', price: 250, category: 'Electronics', stock: 96},
+// ];
+
+// function calc(products, category){
+//    return products.filter(product => product.category === category)
+//    .reduce((total, product) => total + (product.price * product.stock) , 0)
+// }
+
+// const totalValue = calc(products, 'Electronics');
+// console.log(`Electronics = ${totalValue}`);
+
+class Person{
+   constructor(firstName, lastName){
+      this.firstName = firstName;
+      this.lastName = lastName;
+   }
+   getFullName(){
+      return `${this.firstName} ${this.lastName}`;
+   }
+};
+const person1 = new Person('Roma', 'Kaptar');
+console.log(person1.getFullName());
