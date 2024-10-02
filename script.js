@@ -220,10 +220,10 @@
 // element.textContent = "Курсор вийшов з елемента"
 // });
 
-// const element = document.getElementById('mousemove');
-// element.addEventListener('mousemove', (e) => {
-//     element.textContent = `Координати миші: X=${e.clientX}, Y=${e.clientY}`;
-// });
+const element = document.getElementById('mousemove');
+element.addEventListener('mousemove', (e) => {
+    element.textContent = `Координати миші: X=${e.clientX}, Y=${e.clientY}`;
+});
 
 
 
@@ -334,24 +334,24 @@
 // Замініть клас на заголовку.
 // Перевірте чи містить посилання клас list
 
-const links = document.querySelectorAll('ul li a');
-links.forEach(link => {
-   const href = link.getAttribute('href')
-   if (href.startsWith('https') || href.startsWith('http') || href.startsWith('ftp')){
-      link.style.color = 'orange';
-   }
-});
+// const links = document.querySelectorAll('ul li a');
+// links.forEach(link => {
+//    const href = link.getAttribute('href')
+//    if (href.startsWith('https') || href.startsWith('http') || href.startsWith('ftp')){
+//       link.style.color = 'orange';
+//    }
+// });
 
-if (links.length > 0){
-   links[0].classList.add('li_link');
-   links[links.length - 1].classList.add('li_link');
-}
+// if (links.length > 0){
+//    links[0].classList.add('li_link');
+//    links[links.length - 1].classList.add('li_link');
+// }
 
-const text = document.querySelector('h1')
-text.textContent = 'Title';
-text.classList.add('title');
-text.style.color = 'red';
-text.classList.replace('title','newTitle');
+// const text = document.querySelector('h1')
+// text.textContent = 'Title';
+// text.classList.add('title');
+// text.style.color = 'red';
+// text.classList.replace('title','newTitle');
 
 
 
